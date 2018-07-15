@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Wonder Notes</string>
+    <string name="no_results">Empty Notes</string>
+    <string name="network_not_aviable">Network not available</string>
+    <string name="empty_str"> </string>
+    <string name="add_note">Add Note</string>
+    <string name="note_saved_success">Note saved successfully</string>
+    <string name="label_back">Back</string>
+    <string name="label_save">Save</string>
+    <string name="label_enter_note">Enter note here…</string>
+    <string name="note_is_empty">Note is empty</string>
+    <string name="label_note_length">%1$s / 300</string>
+    <string name="label_note_max_length_reached">Aww…You can enter max 300 chars only!</string>
+</resources>

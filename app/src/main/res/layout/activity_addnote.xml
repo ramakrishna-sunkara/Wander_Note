@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="addNoteViewModel"
+            type="com.wonder.wandernote.ui.notes.viewModel.AddNoteViewModel" />
+
+    </data>
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:elevation="2dp"
+                app:contentInsetEnd="0dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetRight="0dp"
+                app:contentInsetStart="0dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <ImageView
+                        android:paddingStart="@dimen/common_padding"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/label_back"
+                        app:srcCompat="@drawable/ic_arrow_back_white_24dp"
+                        android:onClick="@{addNoteViewModel::onBackIconClick}"
+                        />
+
+                    <TextView
+                        style="@style/AppTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/add_note"
+                        android:layout_centerInParent="true"                        android:textColor="@color/colorWhite"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentEnd="true"
+                        android:contentDescription="@string/label_save"
+                        app:srcCompat="@drawable/ic_check_white_24dp"
+                        android:paddingEnd="@dimen/common_padding"
+                        android:layout_centerVertical="true"
+                        android:visibility="@{addNoteViewModel.isSaveButtonShow ? View.VISIBLE : View.INVISIBLE}"
+                        android:onClick="@{addNoteViewModel::onSaveIconClick}"
+                        />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.Toolbar>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/common_padding">
+                <TextView
+                    android:id="@+id/text_note_length"
+                    style="@style/TextTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="@{addNoteViewModel.noteLength}"
+                    />
+
+                <EditText
+                    android:layout_below="@+id/text_note_length"
+                    style="@style/InputText"
+                    android:id="@+id/edittext_add_note"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/label_enter_note"
+                    android:minLines="8"
+                    android:gravity="top"
+                    android:maxLength="300"
+                    android:onTextChanged="@{addNoteViewModel::onTextChanged}"
+                    android:background="@drawable/bg_all_corner"
+                    android:text="@{addNoteViewModel.noteContent}"
+                    android:padding="@dimen/common_padding_s"/>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="@{addNoteViewModel.isLoading ? View.VISIBLE : View.GONE}">
+
+                    <android.support.v4.widget.ContentLoadingProgressBar
+                        android:id="@+id/progress_main"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</layout>
+

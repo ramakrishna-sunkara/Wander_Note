@@ -1,0 +1,56 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorControlActivated">#FFF</item>
+    </style>
+
+    <!-- font styles-->
+    <style name="WFont" parent="@android:style/TextAppearance" />
+
+    <style name="WFont.WFontRegular" parent="WFont">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+    </style>
+    <style name="WFont.WFontMedium" parent="WFont">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+    </style>
+    <style name="WFont.WFontItalic" parent="WFont">
+        <item name="android:fontFamily">@font/montserrat_italic</item>
+    </style>
+
+    <style name="TextTitle" parent="WFont.WFontRegular">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/primary_text</item>
+    </style>
+
+    <style name="Date" parent="WFont.WFontItalic">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/secondary_text</item>
+    </style>
+
+    <style name="InputText" parent="WFont.WFontRegular">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/primary_text</item>
+    </style>
+
+    <style name="AppTitle" parent="WFont.WFontMedium">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+</resources>
