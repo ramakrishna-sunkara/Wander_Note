@@ -1,10 +1,15 @@
 # Wander_Note
 this is for task purpose
 
+<b>API:</b>
+for demo I used mock apis from https://www.mocky.io/
 
-<b><h3>Screens:</h3></b>
+<b>Notes List API:</b> http://www.mocky.io/v2/5b4ad1f52f000083001e0e70
+
+<b>AddNote API: </b> http://www.mocky.io/v2/5b4a18eb2f00004a001e0dff
 
 <br>
+<b><h3>Screens:</h3></b>
 <br>
 <b>Screen1</b>
 <br>
